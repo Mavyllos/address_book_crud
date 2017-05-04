@@ -1,0 +1,106 @@
+<body>
+    <div><br></div>
+    <div class="container well">
+        <div class="row">
+            <div class="col-md-10">
+                <form method="POST" action="/contacts/{{ contact.id }}" class="form-horizontal">
+                    <fieldset class "userProfile">
+                        <legend>Add a New Contact</legend>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="first_name_label">First Name</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user-circle">
+                                        </i>
+                                    </div>
+                                    <input id="first_name" name="first_name" type="text" placeholder="First Name" class="form-control input-md" value="{{contact.first_name}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="last_name_label">Last Name</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user-circle">
+                                        </i>
+                                    </div>
+                                    <input id="last_name" name="last_name" type="text" placeholder="Last Name" class="form-control input-md" value="{{contact.last_name}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label col-xs-12" for="Address">Address</label>
+                            <div class="col-md-8  col-xs-8">
+                                <input id="line_1" name="line_1" type="text" placeholder="Address Line 1" class="form-control input-md" value="{{contact.line_1}}">
+                            </div>
+                            <label class="col-md-4 control-label col-xs-12" for="Address"></label>
+                            <div class="col-md-8  col-xs-8">
+                                <input id="line_2" name="line_2" type="text" placeholder="Address Line 2" class="form-control input-md" value="{{contact.line_2}}">
+                            </div>
+                            <label class="col-md-4 control-label col-xs-12" for="Address"></label>
+                            <div class="col-md-8  col-xs-8">
+                                <input id="city" name="city" type="text" placeholder="City" class="form-control input-md" value="{{contact.city}}">
+                            </div>
+                            <label class="col-md-4 control-label col-xs-12" for="Address"></label>
+                            <div class="col-md-8  col-xs-8">
+                                <input id="state" name="state" type="text" placeholder="State" class="form-control input-md" value="{{contact.state}}">
+                            </div>
+                            <label class="col-md-4 control-label col-xs-12" for="Address"></label>
+                            <div class="col-md-8  col-xs-8">
+                                <input id="zip" name="zip" type="text" placeholder="Zip Code" class="form-control input-md" value="{{contact.zip}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="phone_number_label">Phone Number </label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <input id="phone_numebr" name="phone_number" type="tel" placeholder="Phone Number" class="form-control input-md" value="{{contact.phone_number}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email_address_label">Email Address</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <input id="email_address" name="email_address" type="text" placeholder="Email Address" class="form-control input-md" value="{{contact.email_address}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="url-label">URL Address</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-camera"></i>
+                                    </div>
+                                    <input id="image_url" name="image_url" type="text" placeholder="Image URL" class="form-control input-md" value="{{contact.image_url}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label"></label>
+                            <div class="col-md-4">
+                                <button class="btn btn-sm btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</button>
+                                <a href="#" class="btn btn-sm btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

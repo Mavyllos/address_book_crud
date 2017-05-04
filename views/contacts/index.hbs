@@ -1,0 +1,55 @@
+<div class="container-fluid contacts-cont">
+  <div><br></div>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+      <button id="allContacts" name="allContacts" class="btn btn-sm btn-link"><a href="/contacts/">All Contacts</a></button>
+      <span> | </span>
+      <button id="" name="" class="btn btn-sm btn-link"><a href="">Sort by First Name</a></button>
+      <span> | </span>
+      <button id="" name="" class="btn btn-sm btn-link"><a href="">Sort by First Name</a></button>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address Line 1</th>
+        <th>Address Line 2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Actions</th>
+      </tr>
+          {{#each contacts}}
+        <td class="first_name"><a href="/contacts/{{ this.id }}" class="name-data" value="{{ this.first_name }}">{{ this.first_name }}</a></td>
+        <td class="last_name" value="{{ this.last_name }}">{{ this.last_name }}</td>
+        <td class="line_1" value="{{ this.line_1 }}">{{ this.line_1 }}</td>
+        <td class="line_2" value="{{ this.line_2 }}">{{ this.line_2 }}</td>
+        <td class="city" value="{{ this.city }}">{{ this.city }}</td>
+        <td class="state" value="{{ this.state }}">{{ this.state }}</td>
+        <td class="zip" value="{{ this.zip }}">{{ this.zip }}</td>
+        <td class="phone_number" value="{{ this.phone_number }}">{{ this.phone_number }}</td>
+        <td class="email_address" value="{{ this.email_address }}">{{ this.email_address }}</td>
+        <td>
+                <form action="/contacts/{{ this.id }}/edit">
+                  <button class="btn btn-sm btn-link"
+                  type="submit"
+                  name="edit-button"
+                  value="Edit">Edit</button>
+                </form>
+                <form action="/contacts/{{ this.id }}?_method=DELETE" method="POST">
+                  <button class="btn btn-sm btn-link"
+                  type="submit"
+                  name="delete"
+                  value="Delete">Delete</button>
+                </form>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

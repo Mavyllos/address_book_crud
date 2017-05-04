@@ -1,0 +1,52 @@
+body {
+  padding: 50px;
+  padding-bottom: 100px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 50%), url('https://fthmb.tqn.com/naT_L25u8Z7ye9JkQCFhDO1DsoA=/2920x2048/filters:no_upscale():fill(FFCC00,1)/about/GettyImages-172182709-57d89d713df78c5833cf73de.jpg');
+  background-position: center;
+  background-size: auto;
+
+}
+
+a {
+  color: rgb(71, 71, 69);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: black;
+}
+
+.button-text button, a {
+  color: black;
+}
+
+.button-text button:hover, a:hover {
+  color: rgb(71, 71, 69);
+}
+
+.index-text {
+  color: rgb(217, 213, 219);
+}
+
+/*Navbar*/
+
+.navbar-default .navbar-nav>li>a {
+  color: rgb(217, 213, 219);
+}
+
+.navbar-brand, legend {
+  padding-top: 3px !important;;
+  padding-bottom: 10px !important;;
+  padding-left: 0 !important;;
+  padding-right: 0 !important;;
+}
+
+
+/*image sizing*/
+.image_url {
+  /*margin: 2rem auto;*/
+  height: 300px;
+  width: 375px;
+}
+
+/*Landing page*/

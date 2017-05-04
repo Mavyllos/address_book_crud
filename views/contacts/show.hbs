@@ -1,0 +1,74 @@
+<body>
+    <div class="container-fluid">
+        <div class="row user-row">
+            <div class="panel panel-default">
+                <div class="panel-body main-panel">
+                    <h1 style="text-align: center;">{{contact.first_name}} {{contact.last_name}}</h1>
+                    <div class="col-md-4">
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <p>
+                            {{#if contact.image_url}}
+                            <img src="{{ contact.image_url }}" alt="{{ contact.first_name }}" height="300" width="300" class="user-image">
+                            {{else}}
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Placeholder_couple_superhero.png" alt="" height="300" width="360" class="user-image">
+                            {{/if}}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>
+                                    <strong>Address:</strong>
+                                    <span>{{contact.line_1}}</span>
+                                </p>
+                                {{#if contact.line_2}}
+                                    <p>
+                                        <strong>Address Line 2:</strong>
+                                        <span>{{contact.line_2}}</span>
+                                    </p>
+                                {{else}}
+                                {{/if}}
+                                <p>
+                                    <strong>City:</strong>
+                                    <span>{{contact.city}}</span>
+                                </p>
+                                <p>
+                                    <strong>State:</strong>
+                                    <span>{{contact.state}}</span>
+                                </p>
+                                <p>
+                                    <strong>Zip:</strong>
+                                    <span>{{contact.zip}}</span>
+                                </p>
+                                <p>
+                                    <strong>Phone Number:</strong>
+                                    <span>{{contact.phone_number}}</span>
+                                </p>
+                                <p>
+                                    <strong>Email Address:</strong>
+                                    <span>{{contact.email_address}}</span>
+                                </p>
+                                <p>
+                                    <strong>Image URL:</strong>
+                                    <span>{{contact.image_url}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>Actions<br>
+                                    <a href="/contacts/{{ contact.id }}/edit"><span class="fa fa-pencil-square-o"></span> Edit Contact</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
